@@ -11,8 +11,14 @@ document.querySelectorAll('nav a').forEach(anchor => {
             return; // Do not proceed with the scrolling
         }
 
+        let position;
         // Calculate the position to scroll to, accounting for the header height
-        const position = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        if(window.innerWidth > 1251){
+            position = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        }
+        else{
+            position = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        }
 
         // Scroll to the target position
         window.scrollTo({

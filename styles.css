@@ -22,13 +22,6 @@ header, footer {
     text-align: center;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    background-color: #ff4b4b;
-    padding: 20px 0;
-}
-
 footer {
     padding: 10px 0;
 }
@@ -111,6 +104,13 @@ main {
 @media (min-width: 1251px) {
     .container {
         display: flex;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        background-color: #ff4b4b;
+        padding: 20px 0;
     }
 
     .image-container {
