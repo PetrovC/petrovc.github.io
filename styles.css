@@ -113,6 +113,32 @@ main {
         display: flex;
     }
 
+    .image-container {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        right: 50px;
+        bottom: 150px;
+        background: rgba(0, 0, 0, 0.5); /*in case you need semi transparent background */
+        color: white;
+        padding: 10px;
+    }
+
+    .overlayH {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* adjust as needed */
+    }
+
     .fixed-section {
         margin-top: 50px;
         position: fixed;
@@ -134,7 +160,6 @@ main {
     }
 
     .experience-entry, .education-entry {
-        flex-basis: calc(50% - 20px);
         margin: 10px;
         box-sizing: border-box;
     }
@@ -150,7 +175,7 @@ main {
     }
 }
 
-@media (max-width: 1250px), (max-width: 600px){
+@media (max-width: 1250px), (max-width: 600px) {
     header, nav ul, footer {
         width: 100%;
     }
@@ -175,6 +200,24 @@ main {
     .skills-grid, .languages-grid, .hobbies-grid {
         display: flex;
         flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1250px) {
+    .image-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .profile {
+        flex-basis: 50%;
+    }
+
+    .profile-picture {
+        width: 100%;
+        height: auto;
     }
 }
 
